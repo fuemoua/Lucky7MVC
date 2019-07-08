@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Lucky7MVC" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Repos\\Projects\\Lucky7MVC\\Lucky7MVC\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Repos\\Projects\\Lucky7MVC\\Lucky7MVC\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

@@ -1,0 +1,19 @@
+h1 {
+	text-align: center;
+}
+
+#secH1 {
+	margin-top: 20px;
+}
+#iniBet {
+	font-size: 1.4rem;
+}
+
+#bet {
+	text-align: center;
+}
+
+#inputAmount {
+    display: inline-block;
+    width: 19%;
+}

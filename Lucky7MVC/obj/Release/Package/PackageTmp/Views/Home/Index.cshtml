@@ -1,0 +1,43 @@
+﻿@model Lucky7MVC.Models.Bet
+@{
+    ViewBag.Title = "Lucky 7";
+}
+<div>
+    <div id="bet">
+        <h1 id="mainH1">Lucky Sevens</h1>
+        @Html.ValidationSummary()
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <label id="iniBet">Starting Bet:</label>
+                @Html.TextBoxFor(b => b.InitialBet, new { @class = "form-control", @placeholder = "$0.00", @id = "inputAmount", @type = "number" })
+            </div>
+            <button class="btn btn-success">Play</button>
+        }
+    </div>
+
+    @if (Model != null && Model.InitialBet >= 1)
+    {
+        <h1 id="secH1">Results</h1>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td>Starting Bet</td>
+                    <td id="startValue">@Model.InitialBet</td>
+                </tr>
+                <tr>
+                    <td>Total Rolls Before Going Broke</td>
+                    <td id="count">@Model.RTotalRolls</td>
+                </tr>
+                <tr>
+                    <td>Highest Amount Held</td>
+                    <td id="highestAmount">@Model.RHighestAmountWon</td>
+                </tr>
+                <tr>
+                    <td>Die Roll At The Highest Amount Held</td>
+                    <td id="dieRoll">@Model.RDieRollAtHighest</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>
